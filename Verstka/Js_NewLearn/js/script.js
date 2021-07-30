@@ -26,3 +26,5 @@ var name = 'Ivan';
 }
 
 console.log(result);
+
+alert(navigator.userAgent);
