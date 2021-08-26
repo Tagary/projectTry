@@ -1,0 +1,5 @@
+npm init
+npm i json-server (--save-dev) global типо глобальная
+
+Если в этом проекте был нпм пакет был
+npm i

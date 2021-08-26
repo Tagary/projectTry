@@ -28,3 +28,10 @@ var name = 'Ivan';
 console.log(result);
 
 alert(navigator.userAgent);
+
+console.log([]+false-null+true);
+
+
+
+
+
