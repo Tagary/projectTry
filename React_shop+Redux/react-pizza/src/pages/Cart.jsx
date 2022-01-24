@@ -114,7 +114,7 @@ function Cart() {
               </div>
             </div>
             <div className="content__items">
-              {addedPizzas.map((obj, key) => (
+              {addedPizzas.map((obj) => (
                 <CartItem
                   id={obj.id}
                   key={obj.id}

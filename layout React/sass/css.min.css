@@ -1,0 +1,269 @@
+body {
+    font-family: "SFPro";
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.txt__center {
+    text-align: center;
+}
+
+/* top__content */
+.main__img {
+    background: url(../img/menu_cont_01.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 1080px;
+
+
+}
+
+
+.container__title {
+    padding: 100px 200px;
+    color: white;
+    width: 40%;
+}
+
+.under__tittle__button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button__white {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+.greenbtn {
+    background-color: green;
+    border: 2px solid green;
+}
+
+.auto__slide {
+    display: flex;
+    margin-top: 20px;
+}
+
+.slide__circle {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 10px;
+    min-height: 15px;
+    min-width: 15px;
+}
+
+.active__slide {
+    background-color: #fff;
+}
+
+.txt__tittle {
+    margin-bottom: 20px;
+}
+
+/* main__info */
+
+.container {
+    margin-top: 100px;
+}
+
+
+
+
+/* header */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header__menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+}
+
+.container__header {
+    max-width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle__colum li {
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+
+
+/* describe */
+
+.description {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.blue__article {
+    color: #00A4E8;
+}
+
+.bold__blue {
+    color: #23395d;
+}
+
+.article {
+    color: #2e5984;
+}
+
+.andoid {
+    background-color: #06B25F;
+}
+
+.apple {
+    background-color: #276ED8;
+}
+
+.unity {
+    background-color: #84B5FF;
+}
+
+.container__img {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.img__describe {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img__describe div {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* reviews */
+
+.reviews {
+    max-width: 800px;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px gray;
+}
+
+.content__reviews {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link__resourse {
+    background-color: #06B25F;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.star {
+    color: #06B25F;
+}
+
+/* services */
+
+.services {
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.under__article {
+    color: #0D6EB7;
+    text-align: start;
+}
+
+.norm__services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt__game__development {
+    width: 40%;
+}
+
+.txt__game__development p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.img__game__development {
+    width: 50%;
+}
+
+.revervse__services {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+/* half__img */
+
+.half__img {
+    background: url(../img/halfImg/half_img.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 1080px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+}
+
+.Partnerbuilding {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Partnerbuilding h2 {
+    margin: 0px;
+}
+
+.fakebtn {
+    background-color: #fff;
+    color: #06B25F;
+    border: 1px solid #06B25F;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* achievments */
+
+.achievments__block {
+    text-align: center;
+}

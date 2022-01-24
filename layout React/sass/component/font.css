@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "SFPro";
+    src: url(../../font/SFProDisplay-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SFPro";
+    src: url(../../font/SFProDisplay-Bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "SFPro";
+    src: url(../../font/SFProDisplay-Black.ttf);
+    font-weight: 900;
+}
