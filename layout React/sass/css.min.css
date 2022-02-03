@@ -267,3 +267,82 @@ body {
 .achievments__block {
     text-align: center;
 }
+
+.achievments__container {
+    display: flex;
+    justify-content: center;
+}
+
+.block__achievments {
+    width: 320px;
+    box-shadow: 0 0 10px rgba(145, 138, 138, 0.5);
+    background-color: #F4F7FD;
+    position: relative;
+    margin-right: 30px;
+    border-radius: 10px;
+    min-width: 320px;
+}
+
+.rocket {
+    background: url(../img/achievments/second_achiev.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #F4F7FD;
+}
+
+.absolute__txtachiev {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+}
+
+
+.apa_1 {
+    padding: 0 10px;
+    margin-top: 0px;
+    bottom: 30px;
+}
+
+.apa_2 {
+    padding: 0 10px;
+    margin-top: 0px;
+    bottom: 30px;
+}
+
+.apa_3 {
+    padding: 0 10px;
+    bottom: 50px;
+    left: 30px;
+    margin-top: 0px;
+}
+
+.apa_4 {
+    padding: 0 10px;
+    bottom: 5px;
+}
+
+.blue__achiev {
+    color: #276ED8;
+}
+
+/* .rocket__img {
+    height: 100%;
+} */
+
+.strange__img {
+    padding-top: 20px;
+}
+
+
+/* partners */
+
+.container__partners {
+    background: url(../img/partners/partners_main.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 1411px;
+}
