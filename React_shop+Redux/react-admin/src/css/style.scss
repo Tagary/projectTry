@@ -1,0 +1,88 @@
+.wrapper {
+    border: 1px solid black;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.header {
+}
+.header__topSide {
+    height: 100px;
+}
+.header__bottomSide {
+    height: 20px;
+    background-color: rgba(0, 0, 255, 0.438);
+}
+.main {
+}
+.main__title {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+.main__box {
+}
+
+.box {
+    margin: 0 0 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+}
+
+.box__topSide {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 10px 0;
+}
+.topSide__title{
+}
+.topSide__change{
+}
+
+.box__footer {
+    text-align: end;
+    padding: 20px 10px 0 0;
+}
+
+
+
+.box__personalData {
+    display: flex;
+    justify-content: space-around;
+}
+
+.personalData__content {
+}
+.personalData__photo {
+}
+.personalData__nameMail {
+    display: flex;
+    flex-direction: column;
+}
+.nameMail__content {
+    display: flex;
+}
+.nameMail__whatText {
+    margin: 0 20px 0 0;
+}
+
+
+
+.box__newsManagement {
+    display: flex;
+    justify-content: space-around;
+}
+.newsManagement__wrapper {
+}
+.newsManagement__image {
+}
+.newsManagement__underImage {
+    display: flex;
+    gap: 10px;
+}
+.newsManagement__description {
+}
+.newsManagement__date {
+}
+.newsManagement__text {
+}
+.newsManagement__changeDelete {
+    align-self: flex-end;
+}

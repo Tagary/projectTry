@@ -1,0 +1,281 @@
+.wrapper {
+  border: 1px solid black;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header__topSide {
+  height: 100px;
+}
+
+.header__bottomSide {
+  height: 20px;
+  background-color: rgba(0, 0, 255, 0.438);
+}
+
+.main__title {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.box {
+  margin: 0 0 10px 0;
+
+}
+
+.box__topSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+  padding-bottom: 10px;
+}
+
+.topSide__title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.box__footer {
+  text-align: end;
+  padding: 20px 10px 0 0;
+}
+
+.personalData__photo {
+  border-radius: 50%;
+  background: gray;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-right: 30px;
+}
+
+.download__photo {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  text-align: center;
+  color: #fff;
+}
+
+
+.box__personalData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: left;
+  padding-left: 50px;
+  align-items: center;
+}
+
+.personalData__nameMail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.nameMail__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nameMail__whatText {
+  margin: 0 20px 0 0;
+}
+
+.box__newsManagement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.newsManagement__underImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.newsManagement__changeDelete {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.box__directoriesManagment {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.box__titleanother {
+  display: flex;
+  flex-basis: 200px;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+  padding-bottom: 10px;
+}
+
+.box__titleanother-nborder {
+  display: flex;
+  flex-basis: 200px;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.box__directoriesManagmentbox {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.directory {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.options__direct {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.check__directory {
+  font-size: 14px;
+}
+
+.box__userManageUndertitle {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+  padding-bottom: 10px;
+}
+
+.box__leftUsers {
+  display: flex;
+
+}
+
+.userManagment__choose {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.userManagment__choose:hover {
+  border-bottom: 2px solid blue;
+}
+
+
+
+.userManagment__input {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.search__input {
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.userManagment__search {
+  background-color: blue;
+  color: #fff;
+  padding: 10px;
+}
+
+.userManagment__table-flexibility {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+.userManagment__column {
+  font-weight: bold;
+}
+
+.userManagment__column {
+  max-width: 200px;
+}
+
+.userManagment__table-data {
+  margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+
+}
+
+.userManagment__pagination-number {
+  background-color: gray;
+  max-width: 20px;
+  text-align: center;
+  width: 100%; 
+  margin: 0 10px;
+}
+
+.userManagment__pagination {
+  display: flex;
+}
+
+.userManagment__pagination-Arr {
+  background-color: #b0adad;
+}
+
+
+.box__organisation {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+
+.organisation__staff__container {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.organisation__staff__container li {
+  margin-right: 20px;
+}
+
+
+.border__staff {
+  border: 2px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.organisation__staff {
+  margin-bottom: 20px;
+}
+
+.second__ul {
+  justify-content: center;
+}
+
+
+.third__ul {
+  justify-content: end;
+}
