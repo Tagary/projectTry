@@ -1,9 +1,9 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
-import { Figure } from 'react-bootstrap';
+import React from 'react';
+import ImageItem from '../Components/ImageItem';
 import PaginationBasic from '../Components/PaginationBasic';
 
-interface PhotosItem {
+export interface PhotosItem {
   id: number;
   title: string;
   url: string;
@@ -13,24 +13,37 @@ interface PhotosItem {
 function Galery() {
   const maxLength: number = 24;
   const [items, setItems] = React.useState<PhotosItem[]>([]);
+  const [loading, setLoading] = React.useState<boolean>(false);
+  const [currentPage, setCurrentPage] = React.useState<number>(1);
+  const [itemsPerPage] = React.useState<number>(6);
 
   React.useEffect(() => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/photos/?_limit=${maxLength}`)
-      .then((response) => setItems(response.data));
+    const fetchIMG = async () => {
+      setLoading(true);
+      const response = await axios.get(
+        `https://jsonplaceholder.typicode.com/photos/?_limit=${maxLength}`,
+      );
+      setItems(response.data);
+      setLoading(false);
+    };
+    fetchIMG();
   }, []);
 
-  return (
-    <>
-      {items.map((item) => (
-        <Figure>
-          <Figure.Image alt="150x150" src={item.thumbnailUrl} />
-          <Figure.Caption>{item.title}</Figure.Caption>
-        </Figure>
-      ))}
+  const indexOfLastImage = currentPage * itemsPerPage;
+  const indexOfFirstImage = indexOfLastImage - itemsPerPage;
+  const currentPosts = items.slice(indexOfFirstImage, indexOfLastImage);
 
-      <PaginationBasic />
-    </>
+  const handlerPaginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+  return (
+    <div className="d-flex ">
+      <PaginationBasic
+        totalItem={items.length}
+        itemsPerPage={itemsPerPage}
+        paginate={handlerPaginate}
+      />
+      <ImageItem items={currentPosts} loading={loading} />
+    </div>
   );
 }
 
