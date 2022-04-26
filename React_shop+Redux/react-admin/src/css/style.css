@@ -36,6 +36,10 @@
   padding-bottom: 10px;
 }
 
+.user {
+  display: block;
+}
+
 .topSide__title {
   font-weight: bold;
   font-size: 20px;
@@ -120,7 +124,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1000px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 
@@ -211,6 +215,7 @@
   padding-bottom: 10px;
   border-bottom: 2px solid #000;
 }
+
 .userManagment__column {
   font-weight: bold;
 }
@@ -221,9 +226,9 @@
 
 .userManagment__table-data {
   margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
 
 }
 
@@ -231,7 +236,7 @@
   background-color: gray;
   max-width: 20px;
   text-align: center;
-  width: 100%; 
+  width: 100%;
   margin: 0 10px;
 }
 
@@ -247,7 +252,7 @@
 .box__organisation {
   display: flex;
   justify-content: space-around;
-  
+
 }
 
 
@@ -256,6 +261,7 @@
   display: flex;
   align-items: center;
 }
+
 .organisation__staff__container li {
   margin-right: 20px;
 }
@@ -278,4 +284,10 @@
 
 .third__ul {
   justify-content: end;
+}
+
+.topSide__change {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }

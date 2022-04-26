@@ -32,10 +32,6 @@ const ImageInfo: React.FC = () => {
           <Card.Text>{oneImage.title}</Card.Text>
         </Card.Body>
       </Card>
-
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
   );
 };

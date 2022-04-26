@@ -1,11 +1,16 @@
 import React from 'react';
 
 function NewsEditor() {
+  const admin = false;
   return (
     <div className="box">
-      <div className="box__topSide">
-        <div className="topSide__title">Редактирование новостей</div>
-        <div className="topSide__change">Создать новость</div>
+      <div className={admin ? 'box__topSide' : 'box__topSide user'}>
+        {admin ? (
+          <div className="topSide__title">Редактирование новостей</div>
+        ) : (
+          <div className="topSide__title">Новости</div>
+        )}
+        {admin && <div className="topSide__change">Создать новость</div>}
       </div>
       <div className="box__newsManagement">
         <div className="newsManagement__wrapper">
@@ -17,7 +22,7 @@ function NewsEditor() {
               <div className="newsManagement__date">data</div>
               <div className="newsManagement__text">описание</div>
             </div>
-            <div className="newsManagement__changeDelete">кнопки</div>
+            {admin && <div className="newsManagement__changeDelete">кнопки</div>}
           </div>
         </div>
         <div className="newsManagement__wrapper">
@@ -29,7 +34,7 @@ function NewsEditor() {
               <div className="newsManagement__date">data</div>
               <div className="newsManagement__text">описание</div>
             </div>
-            <div className="newsManagement__changeDelete">кнопки</div>
+            {admin && <div className="newsManagement__changeDelete">кнопки</div>}
           </div>
         </div>
         <div className="newsManagement__wrapper">
@@ -41,7 +46,7 @@ function NewsEditor() {
               <div className="newsManagement__date">data</div>
               <div className="newsManagement__text">описание</div>
             </div>
-            <div className="newsManagement__changeDelete">кнопки</div>
+            {admin && <div className="newsManagement__changeDelete">кнопки</div>}
           </div>
         </div>
       </div>

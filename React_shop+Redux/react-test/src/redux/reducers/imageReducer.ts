@@ -29,4 +29,3 @@ export const imageReducer = (state = initialState, action: ImageAction): ImageSt
         default: 
             return state
     }
-}

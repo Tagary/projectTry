@@ -1,6 +1,7 @@
 import React from 'react';
 
 function UserControl() {
+  const admin = false;
   return (
     <div className="box">
       <div className="box__userManage">
@@ -14,7 +15,7 @@ function UserControl() {
             <div className="userManagment__choose">Управление ФОИВ</div>
             <div className="userManagment__choose">Управление POV</div>
           </div>
-          <div className="topSide__change">Добавить пользователя</div>
+          {admin && <div className="topSide__change">Добавить пользователя</div>}
         </div>
         <div className="box__containerUsermanagment">
           <div className="userManagment__input">

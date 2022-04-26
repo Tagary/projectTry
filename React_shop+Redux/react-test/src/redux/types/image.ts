@@ -52,3 +52,4 @@ export type ImageAction =
     | SetImagePage
     | FetchImageMore
     | FetchFakeLoading
+

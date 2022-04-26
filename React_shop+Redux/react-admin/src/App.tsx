@@ -1,12 +1,12 @@
 import React from 'react';
 
 import './css/style.css';
-import PersonalDataPage from './pages/PersonalDataPage';
+import PersonalDataPageAdmin from './pages/PersonalDataPageAdmin';
 
 function App() {
   return (
     <div className="wrapper">
-      <PersonalDataPage />
+      <PersonalDataPageAdmin />
     </div>
   );
 }

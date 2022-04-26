@@ -1,15 +1,22 @@
 import React from 'react';
 
 function PersonalData() {
+  const admin = false;
+
   return (
     <div className="box">
-      <div className="box__topSide">
+      <div className={admin ? 'box__topSide' : 'box__topSide user'}>
         <div className="topSide__title">Персональные данные</div>
-        <div className="topSide__change">Редактировать</div>
+        {admin && (
+          <div className="topSide__change">
+            <img className="try__tochange" src="/images/svg/editor.svg" alt="" />
+            Редактировать
+          </div>
+        )}
       </div>
       <div className="box__personalData">
         <div className="personalData__photo">
-          <div className="download__photo">загрузите фото</div>
+          <div className="download__photo">Загрузите фото</div>
           <img src="" alt="" />
         </div>
         <div className="personalData__nameMail">
