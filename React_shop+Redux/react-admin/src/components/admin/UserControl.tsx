@@ -1,7 +1,7 @@
 import React from 'react';
 
 function UserControl() {
-  const admin = false;
+  const admin = true;
   return (
     <div className="box">
       <div className="box__userManage">
