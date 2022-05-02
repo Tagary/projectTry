@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { FC } from 'react';
-import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
 import { useActions } from './../../redux/hooks/useActions';
 
 const Login: FC = () => {

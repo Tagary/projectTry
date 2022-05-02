@@ -92,6 +92,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 10px;
 }
 
 .nameMail__whatText {
@@ -320,49 +321,51 @@
   text-align: center;
   text-decoration: none;
   user-select: none;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
   outline: none;
-  border: 1px solid rgba(0,0,0,.4);
-  border-top-color: rgba(0,0,0,.3);
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-top-color: rgba(0, 0, 0, .3);
   border-radius: 2px;
-  background: linear-gradient(rgb(255,255,255), rgb(240,240,240));
+  background: linear-gradient(rgb(255, 255, 255), rgb(240, 240, 240));
   box-shadow:
-   0 0 3px rgba(0,0,0,0) inset,
-   0 1px 1px 1px rgba(255,255,255,.2),
-   0 -1px 1px 1px rgba(0,0,0,0);
+    0 0 3px rgba(0, 0, 0, 0) inset,
+    0 1px 1px 1px rgba(255, 255, 255, .2),
+    0 -1px 1px 1px rgba(0, 0, 0, 0);
   transition: .2s ease-in-out;
 }
 
 .button__login:hover:not(:active) {
   box-shadow:
-   0 0 3px rgba(0,0,0,0) inset,
-   0 1px 1px 1px rgba(0,255,255,.5),
-   0 -1px 1px 1px rgba(0,255,255,.5);
+    0 0 3px rgba(0, 0, 0, 0) inset,
+    0 1px 1px 1px rgba(0, 255, 255, .5),
+    0 -1px 1px 1px rgba(0, 255, 255, .5);
 }
 
 .button__login:active {
-  background: linear-gradient(rgb(250,250,250), rgb(235,235,235));
+  background: linear-gradient(rgb(250, 250, 250), rgb(235, 235, 235));
   box-shadow:
-   0 0 3px rgba(0,0,0,.5) inset,
-   0 1px 1px 1px rgba(255,255,255,.4),
-   0 -1px 1px 1px rgba(0,0,0,.1);
+    0 0 3px rgba(0, 0, 0, .5) inset,
+    0 1px 1px 1px rgba(255, 255, 255, .4),
+    0 -1px 1px 1px rgba(0, 0, 0, .1);
 }
 
 
 .button__skiplogin {
   transition: all 0.3s ease;
 }
+
 .button__skiplogin:hover {
-   box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001;
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
 }
 
 .input__password {
   margin: 10px 0;
 }
+
 .input__login {
   margin: 10px 0;
 }
@@ -374,33 +377,185 @@
   background-color: pink;
   border: 0;
   padding: 5px;
+  color: #fff;
 }
 
 .editphoto {
   background: pink;
   text-align: center;
+  position: relative;
+}
+
+.editphoto::before {
+  content: 'Загрузите фото';
+  color: #fff;
+  display: block;
+  width: fit-content;
+  padding: 31px 0px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-size: 10px;
+  margin: 10px auto 0 auto;
 }
 
 .add__file {
   color: transparent;
-    max-width: 90px;
+  max-width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .add__file::-webkit-file-upload-button {
   visibility: hidden;
 }
 
-.add__file::before {
-  content: "Загрузите фото";
-    color: #fff;
-    display: block;
-    width: fit-content;
-    padding: 31px 0px;
-    outline: none;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    cursor: pointer;
-    text-shadow: 1px 1px #fff;
-    font-size: 10px;
-    margin: 10px auto 0 auto;
+.photo__avatarperson {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  max-width: 100px;
+  width: 100%;
+}
+
+/* modal */
+
+.overlay {
+
+
+
+  position: fixed;
+  /* Sit on top of the page content */
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
+
+.container__modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: rgb(235, 235, 235);
+  max-width: 454px;
+
+  width: 100%;
+  padding: 10px;
+  z-index: 12;
+}
+
+.modal__article {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.modal__paragraph {
+  padding-right: 10px;
+}
+
+.article__createnews {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.modal__paragraph {
+  font-weight: bold;
+}
+
+.text__areain {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.input__imagesnews {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.ulpload__images {
+  text-align: center;
+  font-size: 18px;
+}
+
+.loading__images {
+  display: flex;
+  padding-left: 10px;
+  position: relative;
+}
+
+.save__news {
+  background-color: pink;
+  border: 0;
+  padding: 5px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+
+
+.cancel__news {
+  background-color: rgb(126, 122, 123);
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button__save {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.text__areainput {
+  resize: none;
+}
+
+.keynews__edit {
+  display: flex;
+  align-items: center;
+}
+
+.editnews__pincell {
+  padding-right: 10px;
+}
+
+.img__newswidth {
+  max-width: 100px;
+  width: 100%;
+}
+
+
+.add__filenews {
+  color: transparent;
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.add__filenews::-webkit-file-upload-button {
+  visibility: hidden;
 }

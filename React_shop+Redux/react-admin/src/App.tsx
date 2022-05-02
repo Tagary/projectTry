@@ -7,15 +7,11 @@ import PersonalDataPageAdmin from './pages/PersonalDataPageAdmin';
 import { useTypedSelector } from './redux/hooks/useTypedSelector';
 
 function App() {
-  const {admin, login} =useTypedSelector(state => state.login);
-  console.log(login);
-  
+  const { admin, login } = useTypedSelector((state) => state.login);
 
   return (
     <div className="wrapper">
-            {login ? (admin? <PersonalDataPageAdmin /> : <PersonalDataPage/> ) : (<Login/>) }
-            
-
+      {login ? admin ? <PersonalDataPageAdmin /> : <PersonalDataPage /> : <Login />}
     </div>
   );
 }
