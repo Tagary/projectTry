@@ -1,9 +1,10 @@
 export interface NewsState {
     modal: boolean;
-    oneNews: any[];
+    oneNews: Array<objectNews>;
 }
 
 export interface objectNews {
+    id: number | undefined;
     image: string ;
     article: string;
     text: string;
@@ -12,10 +13,8 @@ export interface objectNews {
 export enum NewsActionTypes {
     FETCH_OPENMOD = 'FETCH_OPENMOD',
     FETCH_CLOSEMOD = 'FETCH_CLOSEMOD',
-    FETCH_IMAGE = 'FETCH_IMAGE',
-    FETCH_TEXT = 'FETCH_TEXT',
-    FETCH_ARTICLE = 'FETCH_ARTICLE',
     FETCH_NEWSADD = 'FETCH_NEWSADD',
+    FETCH_DELETE = 'FETCH_DELETE',
 }
 
 
@@ -27,20 +26,6 @@ interface FetchCloseModAction {
     type: NewsActionTypes.FETCH_CLOSEMOD;
 }
 
-interface FetchNewsTxtAction {
-    type: NewsActionTypes.FETCH_TEXT;
-    payload: string[];
-}
-
-interface FetchNewsArticleAction {
-    type: NewsActionTypes.FETCH_ARTICLE;
-    payload: string[];
-}
-
-interface FetchNewsImageAction {
-    type: NewsActionTypes.FETCH_IMAGE;
-    payload: string[];
-}
 
 interface FetchNewsAdd {
     type: NewsActionTypes.FETCH_NEWSADD;
@@ -50,8 +35,5 @@ interface FetchNewsAdd {
 export type NewsActions = 
 FetchOpenModAction
 | FetchCloseModAction
-| FetchNewsTxtAction
-| FetchNewsArticleAction
-| FetchNewsImageAction
 | FetchNewsAdd
 

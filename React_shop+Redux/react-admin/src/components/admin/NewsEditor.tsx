@@ -5,7 +5,8 @@ import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
 function NewsEditor() {
   const { oneNews } = useTypedSelector((state) => state.news);
 
-  const { OpenModal } = useActions();
+  React.useEffect(() => {}, [oneNews]);
+
   return (
     <div className="box">
       <div className="box__topSide">
@@ -17,7 +18,7 @@ function NewsEditor() {
       </div>
       <div className="box__newsManagement">
         {oneNews.map((data) => (
-          <div className="newsManagement__wrapper">
+          <div key={data.id} className="newsManagement__wrapper">
             <div className="newsManagement__image">
               <img className="img__newswidth" src={data.image} alt="" />
             </div>

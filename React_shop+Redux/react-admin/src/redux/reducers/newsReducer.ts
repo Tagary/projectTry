@@ -4,9 +4,11 @@ import { NewsActions, NewsActionTypes, NewsState } from "../types/news";
 const intialState: NewsState = {
     modal: false,
     oneNews: [
-        {   article: 'Diavolo',
+        {   
+            id: 1,
+            article: 'Diavolo',
             image: '/images/svg/Diavolo_arm_sliced.png',
-            text: 'Почему ДЖороно такой слиьный',
+            text: 'Почему Джорно такой сильный',
             
         }
     ]
@@ -21,6 +23,7 @@ export const newsReducer = (state = intialState, action: NewsActions) : NewsStat
         case NewsActionTypes.FETCH_NEWSADD:
             return {...state, oneNews: action.payload }
 
+            
         default:
             return state;
     }

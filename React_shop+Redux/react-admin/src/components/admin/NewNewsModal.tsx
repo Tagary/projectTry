@@ -8,6 +8,15 @@ function NewNewsModal() {
   const [newsArticle, setNewsArticle] = React.useState('');
   const [newsText, setNewsText] = React.useState('');
   const [newsImage, setNewsImage] = React.useState('');
+  const [idNews, setNewsId] = React.useState<number>(1);
+
+  let infoId = 1;
+
+  React.useEffect(() => {
+    while (oneNews.some((e) => e.id == infoId)) {
+      setNewsId(++infoId);
+    }
+  }, []);
 
   const handlerInputArticle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewsArticle(e.target.value);
@@ -23,17 +32,18 @@ function NewNewsModal() {
   const handlerImageNews = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
     setNewsImage(URL.createObjectURL(target.files[0]));
-    console.log(newsImage);
   };
 
   const handlerSave = () => {
     oneNews.push({
+      id: idNews,
       article: newsArticle,
       image: newsImage,
       text: newsText,
     });
 
     NewsAdd(oneNews);
+
     CloseModal();
   };
 
@@ -71,9 +81,15 @@ function NewNewsModal() {
           </div>
         </div>
         <div className="button__save">
-          <button className="save__news" onClick={handlerSave}>
-            Сохранить
-          </button>
+          {newsImage && newsArticle && newsText ? (
+            <button className="save__news" onClick={handlerSave}>
+              Сохранить
+            </button>
+          ) : (
+            <button disabled className="save__news" onClick={handlerSave}>
+              Сохранить
+            </button>
+          )}
           <button className="cancel__news" onClick={() => CloseModal()}>
             Отмена
           </button>

@@ -4,11 +4,11 @@ import { useActions } from './../../redux/hooks/useActions';
 
 const Login: FC = () => {
   const { loginAdmin, loginSkip } = useActions();
-  const [input, setInput] = React.useState<string>();
-  const [password, setPassword] = React.useState<string>();
+  const [login, setLogin] = React.useState<string>('');
+  const [password, setPassword] = React.useState<string>('');
 
   const changeLoginHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
+    setLogin(e.target.value);
   };
   const changePasswordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
@@ -19,7 +19,7 @@ const Login: FC = () => {
   };
 
   const handleLoginInputAdmin = () => {
-    if (input === 'admin' && password === 'admin') {
+    if (login === 'admin' && password === 'admin') {
       loginAdmin();
       loginSkip();
     } else {
@@ -31,14 +31,14 @@ const Login: FC = () => {
     <div className="container__form">
       <form action="" className="main__form">
         <label htmlFor="">Login</label>
-        <input className="input__login" onChange={changeLoginHandler} value={input} type="text" />
+        <input className="input__login" onChange={changeLoginHandler} value={login} type="text" />
 
         <label htmlFor="">Password</label>
         <input
           className="input__password"
           onChange={changePasswordHandler}
           value={password}
-          type="text"
+          type="password"
         />
       </form>
       <div></div>

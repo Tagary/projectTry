@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
 
 function NewsEditor() {
+  const { oneNews } = useTypedSelector((state) => state.news);
 
   return (
     <div className="box">
@@ -9,41 +11,19 @@ function NewsEditor() {
           <div className="topSide__title">Новости</div>
       </div>
       <div className="box__newsManagement">
-        <div className="newsManagement__wrapper">
-          <div className="newsManagement__image">
-            <img src="" alt="" />
-          </div>
-          <div className="newsManagement__underImage">
-            <div className="newsManagement__description">
-              <div className="newsManagement__date">data</div>
-              <div className="newsManagement__text">описание</div>
+      {oneNews.map((data) => (
+          <div key={data.id} className="newsManagement__wrapper">
+            <div className="newsManagement__image">
+              <img className="img__newswidth" src={data.image} alt="" />
+            </div>
+            <div className="newsManagement__underImage">
+              <div className="newsManagement__description">
+                <div className="newsManagement__date">{data.article}</div>
+                <div className="newsManagement__text">{data.text}</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="newsManagement__wrapper">
-          <div className="newsManagement__image">
-            <img src="" alt="" />
-          </div>
-          <div className="newsManagement__underImage">
-            <div className="newsManagement__description">
-              <div className="newsManagement__date">data</div>
-              <div className="newsManagement__text">описание</div>
-            </div>
-
-          </div>
-        </div>
-        <div className="newsManagement__wrapper">
-          <div className="newsManagement__image">
-            <img src="" alt="" />
-          </div>
-          <div className="newsManagement__underImage">
-            <div className="newsManagement__description">
-              <div className="newsManagement__date">data</div>
-              <div className="newsManagement__text">описание</div>
-            </div>
-
-          </div>
-        </div>
+        ))}
       </div>
       <div className="box__footer">Показать все новости</div>
     </div>

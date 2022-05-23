@@ -58,7 +58,7 @@ function PersonalData() {
               type="file"
               accept="image/jpg"
             />
-            <img className="photo__avatarperson" src={images} alt="" />
+            <img className="photo__avatarperson" src={image} alt="" />
           </div>
         ) : (
           <div className="personalData__photo">
