@@ -22,7 +22,8 @@ export const newsReducer = (state = intialState, action: NewsActions) : NewsStat
             return {...state, modal: false}
         case NewsActionTypes.FETCH_NEWSADD:
             return {...state, oneNews: action.payload }
-
+        case NewsActionTypes.FETCH_DELETE: 
+            return {...state, oneNews: action.payload}
             
         default:
             return state;

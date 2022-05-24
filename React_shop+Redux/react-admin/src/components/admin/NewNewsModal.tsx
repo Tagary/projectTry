@@ -7,13 +7,13 @@ function NewNewsModal() {
   const { CloseModal, NewsAdd } = useActions();
   const [newsArticle, setNewsArticle] = React.useState('');
   const [newsText, setNewsText] = React.useState('');
-  const [newsImage, setNewsImage] = React.useState('');
+  const [newsImage, setNewsImage] = React.useState<null | string>();
   const [idNews, setNewsId] = React.useState<number>(1);
 
   let infoId = 1;
 
   React.useEffect(() => {
-    while (oneNews.some((e) => e.id == infoId)) {
+    while (oneNews.some((item) => item.id === infoId)) {
       setNewsId(++infoId);
     }
   }, []);
@@ -30,15 +30,21 @@ function NewNewsModal() {
   };
 
   const handlerImageNews = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
-    setNewsImage(URL.createObjectURL(target.files[0]));
+    let reader;
+    if (e.target.files && e.target.files[0]) {
+      reader = new FileReader();
+      reader.onload = function (e) {
+        setNewsImage(e.target?.result as string);
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
   };
 
   const handlerSave = () => {
     oneNews.push({
       id: idNews,
       article: newsArticle,
-      image: newsImage,
+      image: newsImage || '',
       text: newsText,
     });
 

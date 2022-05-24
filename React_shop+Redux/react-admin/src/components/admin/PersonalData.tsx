@@ -13,8 +13,15 @@ function PersonalData() {
   React.useEffect(() => {}, [images]);
 
   const handlerOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
-    setImages(URL.createObjectURL(target.files[0]));
+    let reader ;
+    if (e.target.files && e.target.files[0]) {
+      reader = new FileReader();
+    reader.onload = function(e) {
+      setImages(e.target?.result as string)
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  }
+
     ChangeImage(images);
   };
 
@@ -58,7 +65,7 @@ function PersonalData() {
               type="file"
               accept="image/jpg"
             />
-            <img className="photo__avatarperson" src={image} alt="" />
+            <img className="photo__avatarperson" src={images} alt="" />
           </div>
         ) : (
           <div className="personalData__photo">

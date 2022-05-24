@@ -4,8 +4,8 @@ export interface NewsState {
 }
 
 export interface objectNews {
-    id: number | undefined;
-    image: string ;
+    id: number ;
+    image?: string ;
     article: string;
     text: string;
 }
@@ -32,8 +32,14 @@ interface FetchNewsAdd {
     payload: [objectNews];
 }
 
+interface FetchNewsDelete {
+    type: NewsActionTypes.FETCH_DELETE;
+    payload: [objectNews]
+}
+
 export type NewsActions = 
 FetchOpenModAction
 | FetchCloseModAction
 | FetchNewsAdd
+|FetchNewsDelete
 

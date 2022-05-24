@@ -5,7 +5,21 @@ import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
 function NewsEditor() {
   const { oneNews } = useTypedSelector((state) => state.news);
 
-  React.useEffect(() => {}, [oneNews]);
+  const { OpenModal, DeleteNews  } = useActions();
+
+
+
+  const deletNews= ( dataid:number ) => {
+    let oneNewsDel = oneNews.filter(news => {
+      return news.id !== dataid;
+      
+    });
+
+    DeleteNews(oneNewsDel);
+    
+    
+    
+  }
 
   return (
     <div className="box">
@@ -30,7 +44,7 @@ function NewsEditor() {
               <div className="newsManagement__changeDelete">
                 <div className="keynews__edit">
                   <img className="editnews__pincell" src="/images/svg/editnews.svg" alt="" />
-                  <img src="/images/svg/basketblue.svg" alt="" />
+                  <img onClick={()=> deletNews(data.id)} src="/images/svg/basketblue.svg" alt="" />
                 </div>
               </div>
             </div>

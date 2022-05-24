@@ -14,3 +14,7 @@ export function NewsAdd(objectNewsing: Array<objectNews> ) {
 }
 
 
+export function DeleteNews(objectNewsDelete:  Array<objectNews>) {
+    return {type: NewsActionTypes.FETCH_DELETE, payload:  objectNewsDelete }
+    
+}
