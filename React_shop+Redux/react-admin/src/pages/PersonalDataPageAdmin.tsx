@@ -6,19 +6,21 @@ import {
   UserControl,
   OrganisationStructur,
   NewNewsModal,
+  NewsEditorModal,
 } from '../components/admin';
 import { useTypedSelector } from '../redux/hooks/useTypedSelector';
 
 function PersonalDataPageAdmin() {
-  const { modal } = useTypedSelector((state) => state.news);
+  const { modal, modalEditor } = useTypedSelector((state) => state.news);
   return (
     <>
       {modal && <NewNewsModal />}
+      {modalEditor && <NewsEditorModal/>}
       <div className="header">
         <div className="header__bottomSide"></div>
       </div>
       <div className="main">
-        <div className="main__title">Личный кабинет системного администратора</div>
+        <nav className="main__title">Личный кабинет системного администратора</nav>
 
         <div className="main__box">
           <PersonalData />
@@ -28,10 +30,10 @@ function PersonalDataPageAdmin() {
           <OrganisationStructur />
         </div>
       </div>
-      <div className="footer">
+      <footer className="footer">
         <div className="footer__author"></div>
         <div className="footer__someInformation"></div>
-      </div>
+      </footer>
     </>
   );
 }

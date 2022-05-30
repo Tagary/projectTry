@@ -1,6 +1,7 @@
 import React from 'react';
 import { useActions } from '../../redux/hooks/useActions';
 import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
+import editor from '../../assets/images/editor.svg'
 
 function PersonalData() {
   const { edit, name, email, image } = useTypedSelector((state) => state.person);
@@ -51,7 +52,7 @@ function PersonalData() {
 
         {!edit && (
           <div onClick={handlerEdit} className="topSide__change">
-            <img className="try__tochange" src="/images/svg/editor.svg" alt="" />
+            <img className="try__tochange" src={editor} alt="" />
             Редактировать
           </div>
         )}

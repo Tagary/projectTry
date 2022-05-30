@@ -1,7 +1,8 @@
 import React from 'react';
+import arrowleft from '../../assets/images/arrow__left.svg'
+import arrowright from '../../assets/images/arrow__right.svg'
 
 function UserControl() {
-  const admin = true;
   return (
     <div className="box">
       <div className="box__userManage">
@@ -15,7 +16,7 @@ function UserControl() {
             <div className="userManagment__choose">Управление ФОИВ</div>
             <div className="userManagment__choose">Управление POV</div>
           </div>
-          {admin && <div className="topSide__change">Добавить пользователя</div>}
+ <div className="topSide__change">Добавить пользователя</div>
         </div>
         <div className="box__containerUsermanagment">
           <div className="userManagment__input">
@@ -43,11 +44,11 @@ function UserControl() {
             </div>
             <div className="userManagment__pagination">
               <div className="userManagment__pagination-Arr">
-                <img src="/images/svg/arrow-left.svg" alt="" />
+              <img src={arrowleft} alt="" />
               </div>
               <div className="userManagment__pagination-number">1</div>
-              <div className="userManagment__pagination-Arr">
-                <img src="/images/svg/arrow-right.svg" alt="" />
+              <div className="userManagment__pagination-ArrRotate">
+              <img src={arrowleft} alt="" />
               </div>
             </div>
           </div>

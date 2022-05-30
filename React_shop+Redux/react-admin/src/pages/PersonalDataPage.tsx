@@ -15,7 +15,7 @@ function PersonalDataPageAdmin() {
       </div>
       <div className="main">
 
-          <div className="main__title">Личный кабинет</div>
+          <nav className="main__title">Личный кабинет</nav>
 
         <div className="main__box">
           <PersonalData />
@@ -25,10 +25,10 @@ function PersonalDataPageAdmin() {
           <OrganisationStructur />
         </div>
       </div>
-      <div className="footer">
+      <footer className="footer">
         <div className="footer__author"></div>
         <div className="footer__someInformation"></div>
-      </div>
+      </footer>
     </>
   );
 }

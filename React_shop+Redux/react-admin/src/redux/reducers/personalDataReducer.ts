@@ -1,10 +1,10 @@
 import { PersonalActions, PersonalActionTypes, PersonalState } from "../types/personal";
-
+import diavolo from '../../assets/images/diavolo_arm_sliced.png'
 
 const intialState: PersonalState = {
     name: 'Владимир Миненко',
     email: 'dsadasdsad@gmail.com',
-    image: '/images/svg/Diavolo_arm_sliced.png',
+    image: `${diavolo}`,
     edit: false,
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { useActions } from '../../redux/hooks/useActions';
 import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
 
+
 function NewNewsModal() {
   const { oneNews } = useTypedSelector((state) => state.news);
   const { CloseModal, NewsAdd } = useActions();
@@ -11,6 +12,9 @@ function NewNewsModal() {
   const [idNews, setNewsId] = React.useState<number>(1);
 
   let infoId = 1;
+
+  const now = new Date();
+const nowDay = `${now.getDate()}.${now.getMonth() + 1 }.${now.getFullYear()}`
 
   React.useEffect(() => {
     while (oneNews.some((item) => item.id === infoId)) {
@@ -46,6 +50,7 @@ function NewNewsModal() {
       article: newsArticle,
       image: newsImage || '',
       text: newsText,
+      date: nowDay,
     });
 
     NewsAdd(oneNews);
@@ -82,7 +87,7 @@ function NewNewsModal() {
               type="file"
               accept="image/jpg"
             />
-            <img src="/images/svg/uploade.svg" alt="" />
+            <img src='uploade.svg' alt="" />
             <div className="ulpload__images">Загрузить изображение</div>
           </div>
         </div>
@@ -101,6 +106,7 @@ function NewNewsModal() {
           </button>
         </div>
       </div>
+      
       <div className="overlay" onClick={() => CloseModal()}></div>
     </div>
   );

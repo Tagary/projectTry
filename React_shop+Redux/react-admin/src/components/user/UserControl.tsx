@@ -1,4 +1,7 @@
 import React from 'react';
+import arrowleft from '../../assets/images/arrow__left.svg'
+import arrowright from '../../assets/images/arrow__right.svg'
+
 
 function UserControl() {
   return (
@@ -41,11 +44,11 @@ function UserControl() {
             </div>
             <div className="userManagment__pagination">
               <div className="userManagment__pagination-Arr">
-                <img src="/images/svg/arrow-left.svg" alt="" />
+                <img src={arrowleft} alt="" />
               </div>
               <div className="userManagment__pagination-number">1</div>
-              <div className="userManagment__pagination-Arr">
-                <img src="/images/svg/arrow-right.svg" alt="" />
+              <div className="userManagment__pagination-ArrRotate">
+                <img src={arrowleft} alt="" />
               </div>
             </div>
           </div>
