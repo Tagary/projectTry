@@ -1,5 +1,6 @@
 import React from 'react';
 import downArrow from '../../assets/images/down__arrow.svg';
+import editor from '../../assets/images/editor.svg';
 
 function OrganisationStructur() {
   const admin = true;
@@ -25,7 +26,7 @@ function OrganisationStructur() {
             </li>
             {admin && (
               <li className="organistaion__staff__editor">
-                <img src="/images/svg/editor.svg" alt="" />
+                <img src={editor} alt="" />
               </li>
             )}
           </ul>
@@ -40,12 +41,12 @@ function OrganisationStructur() {
               </li>
               {admin && (
                 <li className="organistaion__staff__editor">
-                  <img src="/images/svg/editor.svg" alt="" />
+                  <img src={editor} alt="" />
                 </li>
               )}
               {admin && (
                 <li className="organistaion__staff__editor">
-                  <img src="/images/svg/crossblue.svg" alt="" />
+                  <img src={} alt="" />
                 </li>
               )}
             </ul>
@@ -60,12 +61,12 @@ function OrganisationStructur() {
                 </li>
                 {admin && (
                   <li className="organistaion__staff__editor">
-                    <img src="/images/svg/editor.svg" alt="" />
+                    <img src={editor} alt="" />
                   </li>
                 )}
                 {admin && (
                   <li className="organistaion__staff__editor">
-                    <img src="/images/svg/crossblue.svg" alt="" />
+                    <img src={} alt="" />
                   </li>
                 )}
               </ul>
@@ -79,12 +80,12 @@ function OrganisationStructur() {
                 </li>
                 {admin && (
                   <li className="organistaion__staff__editor">
-                    <img src="/images/svg/editor.svg" alt="" />
+                    <img src={editor} alt="" />
                   </li>
                 )}
                 {admin && (
                   <li className="organistaion__staff__editor">
-                    <img src="/images/svg/crossblue.svg" alt="" />
+                    <img src={} alt="" />
                   </li>
                 )}
               </ul>
@@ -101,12 +102,12 @@ function OrganisationStructur() {
               </li>
               {admin && (
                 <li className="organistaion__staff__editor">
-                  <img src="/images/svg/editor.svg" alt="" />
+                  <img src={editor} alt="" />
                 </li>
               )}
               {admin && (
                 <li className="organistaion__staff__editor">
-                  <img src="/images/svg/crossblue.svg" alt="" />
+                  <img src={} alt="" />
                 </li>
               )}
             </ul>
@@ -126,7 +127,7 @@ function OrganisationStructur() {
             </li>
             {admin && (
               <li className="organistaion__staff__editor">
-                <img src="/images/svg/editor.svg" alt="" />
+                <img src={editor} alt="" />
               </li>
             )}
           </ul>

@@ -33,3 +33,5 @@ export type TodoAction =
     | FetchTodoErrorAction
     | FetchTodoSuccessAction
     | SetTodoPage
+const arr = [1,2,3];
+
